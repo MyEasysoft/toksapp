@@ -20,10 +20,11 @@
   align-items: center;
 
   /* fill */
-  background-color: var(--colorWhite);
+  background-color: transparent;
+  margin-bottom: -100px;
 
   /* shadows */
-  box-shadow: var(--boxShadow);
+  
 
   @media (--viewportMedium) {
     display: none;

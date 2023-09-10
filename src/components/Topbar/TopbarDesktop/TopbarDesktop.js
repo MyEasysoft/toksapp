@@ -139,21 +139,30 @@ const TopbarDesktop = props => {
 
   return (
     <nav className={classes}>
+      
       <LinkedLogo
         className={css.logoLink}
         format="desktop"
         alt={intl.formatMessage({ id: 'TopbarDesktop.logo' }, { marketplaceName })}
       />
-      {search}
-      <NamedLink className={css.createListingLink} name="NewListingPage">
+
+      <div>
+        {inboxLink}
+        {profileMenu}
+        {signupLink}
+        {loginLink}
+      </div>
+
+      <div>
+        {search}
+        <NamedLink className={css.createListingLink} name="NewListingPage">
         <span className={css.createListing}>
           <FormattedMessage id="TopbarDesktop.createListing" />
         </span>
       </NamedLink>
-      {inboxLink}
-      {profileMenu}
-      {signupLink}
-      {loginLink}
+      </div>
+      
+      
     </nav>
   );
 };

@@ -22,25 +22,7 @@ const KeywordSearchField = props => {
           <IconSearchDesktop />
         </div>
       </button>
-      <Field
-        name="keywords"
-        render={({ input, meta }) => {
-          return (
-            <input
-              className={isMobile ? css.mobileInput : css.desktopInput}
-              {...input}
-              id={isMobile ? 'keyword-search-mobile' : 'keyword-search'}
-              data-testid={isMobile ? 'keyword-search-mobile' : 'keyword-search'}
-              ref={inputRef}
-              type="text"
-              placeholder={intl.formatMessage({
-                id: 'TopbarSearchForm.placeholder',
-              })}
-              autoComplete="off"
-            />
-          );
-        }}
-      />
+    
     </div>
   );
 };
